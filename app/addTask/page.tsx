@@ -49,7 +49,7 @@ const AddTask: FC = () => {
         </div>
         <div className="mb-6">
           <label htmlFor="taskCode" className="block mb-2 text-sm text-gray-600"
-            >Task Code</label
+            >Task ID</label
           >
           <input
             type="text"
@@ -73,7 +73,7 @@ const AddTask: FC = () => {
         </div>
         <div className="mb-6">
             {/* start date cannot be before the start date of the project */}
-          <label htmlFor="startDate" className="text-sm text-gray-600">Start Date</label>
+          <label htmlFor="startDate" className="text-sm text-gray-600">Planned Start Date -  Cannot be before the project start date</label>
           <input
             type="Date"
             name="startDate"
@@ -83,7 +83,13 @@ const AddTask: FC = () => {
         </div>
         <div className="mb-6">
             {/* start date cannot be before the start date of the project */}
-          <label htmlFor="endDate" className="text-sm text-gray-600">End Date</label>
+        <div className="group relative w-max">
+          <label htmlFor="endDate" className="text-sm text-gray-600">Planed End Date - Cannot be greater  than project end date</label>
+          <span
+             className="pointer-events-none absolute -top-6 left-0 w-max rounded bg-gray-900 px-2 py-1 text-sm font-medium text-gray-50 opacity-0 shadow transition-opacity group-hover:opacity-100">
+             End date cannot be greater than the end date of the project.
+        </span>
+        </div>
           <input
             type="Date"
             name="endDate"
