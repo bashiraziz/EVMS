@@ -13,6 +13,15 @@ const AddTask: FC = () => {
     </div>
     <div>
       <form action="" method="POST">
+      <div className="flex items-center w-1/4">
+          <input
+            type="checkbox"
+            name="active"
+            className="w-5 h-5 border border-gray-300 rounded-sm outline-none cursor-pointer"
+          />
+          <label className="ml-2 text-sm" htmlFor="active">Active</label>
+        </div>
+        <br />
       <div className="w-12/12">
   <label className="inline-block text-sm text-gray-600" htmlFor="color">Select a Project</label>
   <div className="relative flex w-full">
