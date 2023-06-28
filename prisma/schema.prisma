@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+  datasource db {
+    provider          = "postgresql"
+    url               = env("DATABASE_URL")
+    directUrl         = env("DIRECT_DATABASE_URL")
+    shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+  }
+
+  model Element {
+    id           String @id @default(cuid())
+    elementName  String
+    atomicNumber Int    @unique
+    symbol       String
+  }
+
+  model Project {
+    projectCode String @id @default(cuid())
+    projectName String
+    startDate String
+    endDate String
+
+
+  }
