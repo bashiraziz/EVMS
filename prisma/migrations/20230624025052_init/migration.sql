@@ -14,6 +14,7 @@ CREATE TABLE "Project" (
     "projectName" TEXT NOT NULL,
     "startDate"   DATE NOT NULL,
     "endDate"     DATE NOT NULL,
+    "notes"       TEXT,
 
     CONSTRAINT "Project_pkey" PRIMARY KEY ("projectCode")
 );

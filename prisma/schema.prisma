@@ -24,6 +24,5 @@ generator client {
     projectName String
     startDate String
     endDate String
-
-
+    notes String
   }

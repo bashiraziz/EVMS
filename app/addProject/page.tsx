@@ -1,8 +1,34 @@
 import type { FC } from 'react';
+import { PrismaClient } from '@prisma/client';
+//import Router from 'next/router';
 
+
+const prisma = new PrismaClient();
+
+ 
 const AddProject: FC = () => {
 
-    return(
+  
+
+return(
+
+// // async function submitData(projectCode:string, projectName:string) {
+// //     // e.preventDefault();
+// //      // TODO
+// //      // You will implement this next ...
+
+// //    const project = await prisma.project.create({
+// //      data: {
+// //        projectCode,
+// //        projectName,
+// //      },
+// console.log('User created:', user);
+// //    });
+
+
+ 
+  
+
 <div className="container mx-auto">
   <div className="max-w-xl p-5 mx-auto my-10 bg-white rounded-md shadow-sm">
     <div className="text-center">
@@ -12,7 +38,7 @@ const AddProject: FC = () => {
       </p>
     </div>
     <div>
-      <form action="" method="POST">
+      <form action="{submitData()}" method="POST">
         <div className="mb-6">
         <div className="flex items-center w-1/4">
           <input
@@ -73,13 +99,13 @@ const AddProject: FC = () => {
             name="notes"
             placeholder="Add notes here"
             className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-            required
-          ></textarea>
+          >
+          </textarea>
         </div>
         <div className="mb-6">
           <button
             type="submit"
-            className="w-full px-2 py-4 text-white bg-indigo-500 rounded-md  focus:bg-indigo-600 focus:outline-none"
+            className="w-full px-2 py-4 text-white bg-green-600 rounded-md  focus:bg-indigo-600 focus:outline-none"
           >
             Submit
           </button>
