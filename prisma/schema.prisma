@@ -25,4 +25,5 @@ generator client {
     startDate String
     endDate String
     notes String
+    active Boolean
   }

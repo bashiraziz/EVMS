@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 
-const AddData: FC = () => {
+const AddProjectForm: FC = () => {
     return(
 
         <div className="p-10">
@@ -17,4 +17,4 @@ const AddData: FC = () => {
 
     )
     }
-    export default AddData;
+    export default AddProjectForm;
