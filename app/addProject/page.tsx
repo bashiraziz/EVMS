@@ -38,7 +38,7 @@ return(
       </p>
     </div>
     <div>
-      <form action="{submitData()}" method="POST">
+      <form action="/api/projects" method="POST">
         <div className="mb-6">
         <div className="flex items-center w-1/4">
           <input
